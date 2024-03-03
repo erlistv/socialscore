@@ -2,6 +2,7 @@
 
 body {
     margin: 0px;
+    background-color: grey;
 }
 
 .navbar {
@@ -10,7 +11,7 @@ body {
     overflow: hidden;
     font-family: Arial, sans-serif;
     height: 100px;
-    width: 100000px;
+    width: 100vw;
 }
 
 .navbar img {
@@ -31,40 +32,57 @@ body {
 }
 
 #container {
+    margin-left: 2vw;
     display: grid;
-    place-items: center !important;
+    place-items: left !important;
 }
 
 .votebutton img{
-    height: 100px;
-    width: 100px;
+    height: 30px;
+    width: 30px;
 }
 
 
 .votebutton a {
-    height: 100px;
-    width: 100px;
+    height: 30px;
+    width: 30px;
 
 }
 
-.votebutton h1 {
+#person {
+    width: 180px;
+    height: 200px;
+    margin-top: 20px;
+    border-radius: 10%;
+    background-color: black;
+    float: left;
+    display: grid;
+    place-items: center;
+}
+
+.name {
+    color: white;
     text-align: center;
     font-family: 'Montserrat';
-    width: 100px;
-}
-
-#votebuttons {
     width: fit-content;
-    height: fit-content;
 }
 
 #voteup {
-    width: 100px;
-    margin-right: 400px;
-    transform: translateY(186px);
+    width: 30px;
+    margin-right: 80px;
+    transform: translateY(165px);
+
 }
 
 #votedown {
-    width: 100px;
-    margin-left: 400px;
+    width: 30px;
+    margin-left: 80px;
+    place-self: right !important;
+}
+
+.votesdisplay {
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat';
 }
