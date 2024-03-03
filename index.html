@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="format-detection" content="telephone=no">
+	    <meta name="description" content="Test Website">
+        <title>socialscore</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/37c6a528e7.js" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div class="navbar">
+             <a href="index.html"><img src="images/ratingsitelogo.png"></img></a>
+             <h1>socialscore</h1>
+        </div>
+        <div id="container">
+            <div id="votebuttons">
+                <div class="votebutton" id="voteup">
+                    <a href="javascript:voteUp()"class="voteupbutton"><img src="images/uparrow.png"></img></a>
+                    <h1 id="votesupdisplay">0</h1>
+                </div>
+                <div class="votebutton" id="votedown">
+                    <a href="javascript:voteDown()"class="votedownbutton"><img src="images/downarrow.png"></img></a>
+                    <h1 id="votesdowndisplay">0</h1>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
