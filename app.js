@@ -1,3 +1,5 @@
+let votesocket = new WebSocket("wss://s")
+
 let votesUp = 0
 
 let votesDown = 0
