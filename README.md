@@ -1,2 +1,3 @@
-First website ever
-Made by Erlis Hoxha
+socialscore
+
+vote up or down on people in your school
