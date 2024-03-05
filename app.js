@@ -1,39 +1,93 @@
 let votesocket = new WebSocket("wss://s")
 
-let person1 = 0
+const score = {}
 
-let person2 = 0
+const buttonstatus = {}
 
-let person3 = 0
+function voteUp(name, id, buttonid) {
+    if (!buttonstatus[buttonid]) {
+        buttonstatus[buttonid] = {clicked: true, hovered: false}
+    } else if (buttonstatus[buttonid].clicked) {
+        buttonstatus[buttonid].clicked = false
+    } else {
+        buttonstatus[buttonid].clicked = true
+    }
 
-let person4 = 0
+    if (!score[name]) {
+        score[name] = {score: 0}
+    }
 
-let person5 = 0
-
-let person6 = 0
-
-let person7 = 0
-
-let person8 = 0
-
-
-
-function voteUp1() {
-    person1 = person1 + 1
-    document.getElementById("person1").innerHTML = "score: " + person1
+    score[name].score++
+    document.getElementById(name).innerHTML = "score: " + score[name].score
+    document.getElementById(id).setAttribute('src', 'images/uparrow.png')
 }
 
-function voteDown1() {
-    person1 = person1 - 1
-    document.getElementById("person1").innerHTML = "score: " + person1
+function voteDown(name, id, buttonid) {
+    if (!buttonstatus[buttonid]) {
+        buttonstatus[buttonid] = {clicked: true, hovered: false}
+    } else if (buttonstatus[buttonid].clicked) {
+        buttonstatus[buttonid].clicked = false
+    } else {
+        buttonstatus[buttonid].clicked = true
+    }
+
+    if (!score[name]) {
+        score[name] = {score: 0}
+    }
+
+    score[name].score--
+    document.getElementById(name).innerHTML = "score: " + score[name].score
+    document.getElementById(id).setAttribute('src', 'images/downarrow.png')
 }
 
-function voteUp2() {
-    person2 = person2 + 1
-    document.getElementById("person2").innerHTML = "score: " + person2
+function hoverup(element, buttonid) {
+    if (!buttonstatus[buttonid]) {
+        buttonstatus[buttonid] = {clicked: false, hovered: true}
+    } else if (buttonstatus[buttonid] && buttonstatus[buttonid].clicked) {
+
+    } else {
+        element.setAttribute('src', 'images/uparrow.png')
+    }
+
+    if (buttonstatus[buttonid].hovered) {
+        element.setAttribute('src', 'images/uparrow.png')
+    }
 }
 
-function voteDown2() {
-    person2 = person2 - 1
-    document.getElementById("person2").innerHTML = "score: " + person2
+function hoverdown(element, buttonid) {
+    if (!buttonstatus[buttonid]) {
+        buttonstatus[buttonid] = {clicked: false, hovered: true}
+    } else if (buttonstatus[buttonid] && buttonstatus[buttonid].clicked) {
+
+    } else {
+        element.setAttribute('src', 'images/downarrow.png')
+    }
+
+    if (buttonstatus[buttonid].hovered) {
+        element.setAttribute('src', 'images/downarrow.png')
+    }
+}
+
+function unhoverup(element, buttonid) {
+    if (!buttonstatus[buttonid] || !buttonstatus[buttonid].clicked) {
+        element.setAttribute('src', 'images/voteupgray.png')
+        buttonstatus[buttonid].hovered = false
+    }
+
+    if (buttonstatus[buttonid] && buttonstatus[buttonid].hovered && !buttonstatus[buttonid].clicked) {
+        element.setAttribute('src', 'images/voteupgray.png')
+        buttonstatus[buttonid].hovered = false
+    }
+}
+
+function unhoverdown(element, buttonid) {
+    if (!buttonstatus[buttonid] || !buttonstatus[buttonid].clicked) {
+        element.setAttribute('src', 'images/votedowngray.png')
+        buttonstatus[buttonid].hovered = false
+    }
+
+    if (buttonstatus[buttonid] && buttonstatus[buttonid].hovered && !buttonstatus[buttonid].clicked) {
+        element.setAttribute('src', 'images/votedowngray.png')
+        buttonstatus[buttonid].hovered = false
+    }
 }

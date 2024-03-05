@@ -10,7 +10,7 @@ body {
     display: flex;
     overflow: hidden;
     font-family: Arial, sans-serif;
-    height: 100px;
+    height: 100px;  
     width: 100vw;
 }
 
@@ -19,6 +19,10 @@ body {
     height: 100px;
     justify-self: left !important;
     margin-left: 10px;
+}
+
+.navbar img:hover {
+    transform: translateY(-2px);
 }
 
 .navbar h1 {
@@ -40,6 +44,10 @@ body {
 .votebutton img{
     height: 30px;
     width: 30px;
+}
+
+.votebutton img:hover {
+    transform: translateY(-2px);
 }
 
 
