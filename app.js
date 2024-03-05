@@ -71,7 +71,7 @@ function hoverdown(element, buttonid) {
 function unhoverup(element, buttonid) {
     if (!buttonstatus[buttonid] || !buttonstatus[buttonid].clicked) {
         element.setAttribute('src', 'images/voteupgray.png')
-        buttonstatus[buttonid].hovered = false
+        buttonstatus[buttonid] = {clicked: false, hovered: false}
     }
 
     if (buttonstatus[buttonid] && buttonstatus[buttonid].hovered && !buttonstatus[buttonid].clicked) {
@@ -83,7 +83,7 @@ function unhoverup(element, buttonid) {
 function unhoverdown(element, buttonid) {
     if (!buttonstatus[buttonid] || !buttonstatus[buttonid].clicked) {
         element.setAttribute('src', 'images/votedowngray.png')
-        buttonstatus[buttonid].hovered = false
+        buttonstatus[buttonid] = {clicked: false, hovered: false}
     }
 
     if (buttonstatus[buttonid] && buttonstatus[buttonid].hovered && !buttonstatus[buttonid].clicked) {
