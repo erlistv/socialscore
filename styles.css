@@ -36,9 +36,7 @@ body {
 }
 
 #container {
-    margin-left: 2vw;
-    display: grid;
-    place-items: left !important;
+    display: flex;
 }
 
 .votebutton img{
@@ -57,10 +55,10 @@ body {
 
 }
 
-#person {
-    width: 180px;
+.person {
+    width: 190  px;
     height: 200px;
-    margin-top: 20px;
+    margin: 5px 5px;
     border-radius: 20%;
     background-color: black;
     float: left;
@@ -71,14 +69,15 @@ body {
 .name {
     color: white;
     text-align: center;
-    font-family: 'Montserrat';
+    font-size: 40px;
+    font-family: 'Montserrat' !important;
     width: fit-content;
 }
 
 #voteup {
     width: 30px;
     margin-right: 80px;
-    transform: translateY(166px);
+    transform: translateY(164px);
 
 }
 
@@ -93,4 +92,9 @@ body {
     margin-top: 0px;
     margin-bottom: 20px;
     font-family: 'Montserrat';
+}
+
+.col-sm {
+    margin-left: 5px;
+    justify-content: center;
 }

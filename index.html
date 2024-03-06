@@ -6,6 +6,8 @@
 	    <meta name="description" content="Test Website">
         <title>socialscore</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
         <script src="app.js"></script>
     </head>
     <body>
@@ -13,27 +15,101 @@
              <a href="index.html"><img src="images/ratingsitelogo.png"></img></a>
              <h1>socialscore</h1>
         </div>
-        <div id="container">
-            <div id="person">
-                <div class="votebutton" id="voteup">
-                    <a href="javascript:voteUp('person1', 'voteup1', 'up1')" class="voteupbutton"><img src="images/voteupgray.png" id="voteup1" onmouseover="javascript:hoverup(this, 'up1')" onmouseout="javascript:unhoverup(this)"></img></a>
+        <div class="row justify-content-center">
+            <div class="col-sm justify-content-center">
+                <div class="person">
+                    <div class="votebutton" id="voteup">
+                        <a href="javascript:voteUp('person1', 'voteup1', 'up1')" class="voteupbutton"><img src="images/voteupgray.png" id="voteup1" onmouseover="javascript:hoverup(this, 'up1')" onmouseout="javascript:unhoverup(this)"></img></a>
+                    </div>
+                    <h1 class="name">Person 1</h1>
+                    <h2 class="votesdisplay" id="person1">score: 0</h2>
+                    <div class="votebutton" id="votedown">
+                        <a href="javascript:voteDown('person1', 'votedown1', 'down1')"class="votedownbutton"><img src="images/votedowngray.png" id="votedown1" onmouseover="javascript:hoverdown(this, 'down1')" onmouseout="javascript:unhoverdown(this)"></img></a>                   
+                    </div>
                 </div>
-                <h1 class="name">Person 1</h1>
-                <h2 class="votesdisplay" id="person1">score: 0</h2>
-                <div class="votebutton" id="votedown">
-                    <a href="javascript:voteDown('person1', 'votedown1', 'down1')"class="votedownbutton"><img src="images/votedowngray.png" id="votedown1" onmouseover="javascript:hoverdown(this, 'down1')" onmouseout="javascript:unhoverdown(this)"></img></a>                   
+                <div class="person">
+                    <div class="votebutton" id="voteup">
+                        <a href="javascript:voteUp('person2', 'voteup2', 'up2')"class="voteupbutton"><img src="images/voteupgray.png" id="voteup2" onmouseover="javascript:hoverup(this, 'up2')" onmouseout="javascript:unhoverup(this)"></img></a>
+                    </div>
+                    <h1 class="name">Person 2</h1>
+                    <h2 class="votesdisplay" id="person2">score: 0</h2>
+                    <div class="votebutton" id="votedown">
+                        <a href="javascript:voteDown('person2', 'votedown2', 'down2')"class="votedownbutton"><img src="images/votedowngray.png" id="votedown2" onmouseover="javascript:hoverdown(this, 'down2')" onmouseout="javascript:unhoverdown(this)"></img></a>
+                    </div>
                 </div>
-            </div>
-            <div id="person">
-                <div class="votebutton" id="voteup">
-                    <a href="javascript:voteUp('person2', 'voteup2', 'up2')"class="voteupbutton"><img src="images/voteupgray.png" id="voteup2" onmouseover="javascript:hoverup(this, 'up2')" onmouseout="javascript:unhoverup(this)"></img></a>
+                <div class="person">
+                    <div class="votebutton" id="voteup">
+                        <a href="javascript:voteUp('person3', 'voteup3', 'up3')"class="voteupbutton"><img src="images/voteupgray.png" id="voteup3" onmouseover="javascript:hoverup(this, 'up3')" onmouseout="javascript:unhoverup(this)"></img></a>
+                    </div>
+                    <h1 class="name">Person 3</h1>
+                    <h2 class="votesdisplay" id="person3">score: 0</h2>
+                    <div class="votebutton" id="votedown">
+                        <a href="javascript:voteDown('person3', 'votedown3', 'down3')"class="votedownbutton"><img src="images/votedowngray.png" id="votedown3" onmouseover="javascript:hoverdown(this, 'down3')" onmouseout="javascript:unhoverdown(this)"></img></a>
+                    </div>
                 </div>
-                <h1 class="name">Person 2</h1>
-                <h2 class="votesdisplay" id="person2">score: 0</h2>
-                <div class="votebutton" id="votedown">
-                    <a href="javascript:voteDown('person2', 'votedown2', 'down2')"class="votedownbutton"><img src="images/votedowngray.png" id="votedown2" onmouseover="javascript:hoverdown(this, 'down2')" onmouseout="javascript:unhoverdown(this)"></img></a>
+                <div class="person">
+                    <div class="votebutton" id="voteup">
+                        <a href="javascript:voteUp('person2', 'voteup2', 'up2')"class="voteupbutton"><img src="images/voteupgray.png" id="voteup2" onmouseover="javascript:hoverup(this, 'up2')" onmouseout="javascript:unhoverup(this)"></img></a>
+                    </div>
+                    <h1 class="name">Person 2</h1>
+                    <h2 class="votesdisplay" id="person2">score: 0</h2>
+                    <div class="votebutton" id="votedown">
+                        <a href="javascript:voteDown('person2', 'votedown2', 'down2')"class="votedownbutton"><img src="images/votedowngray.png" id="votedown2" onmouseover="javascript:hoverdown(this, 'down2')" onmouseout="javascript:unhoverdown(this)"></img></a>
+                    </div>
                 </div>
-            </div>
+                <div class="person">
+                    <div class="votebutton" id="voteup">
+                        <a href="javascript:voteUp('person2', 'voteup2', 'up2')"class="voteupbutton"><img src="images/voteupgray.png" id="voteup2" onmouseover="javascript:hoverup(this, 'up2')" onmouseout="javascript:unhoverup(this)"></img></a>
+                    </div>
+                    <h1 class="name">Person 2</h1>
+                    <h2 class="votesdisplay" id="person2">score: 0</h2>
+                    <div class="votebutton" id="votedown">
+                        <a href="javascript:voteDown('person2', 'votedown2', 'down2')"class="votedownbutton"><img src="images/votedowngray.png" id="votedown2" onmouseover="javascript:hoverdown(this, 'down2')" onmouseout="javascript:unhoverdown(this)"></img></a>
+                    </div>
+                </div>
+                <div class="person">
+                    <div class="votebutton" id="voteup">
+                        <a href="javascript:voteUp('person2', 'voteup2', 'up2')"class="voteupbutton"><img src="images/voteupgray.png" id="voteup2" onmouseover="javascript:hoverup(this, 'up2')" onmouseout="javascript:unhoverup(this)"></img></a>
+                    </div>
+                    <h1 class="name">Person 2</h1>
+                    <h2 class="votesdisplay" id="person2">score: 0</h2>
+                    <div class="votebutton" id="votedown">
+                        <a href="javascript:voteDown('person2', 'votedown2', 'down2')"class="votedownbutton"><img src="images/votedowngray.png" id="votedown2" onmouseover="javascript:hoverdown(this, 'down2')" onmouseout="javascript:unhoverdown(this)"></img></a>
+                    </div>
+                </div>
+                <div class="person">
+                    <div class="votebutton" id="voteup">
+                        <a href="javascript:voteUp('person2', 'voteup2', 'up2')"class="voteupbutton"><img src="images/voteupgray.png" id="voteup2" onmouseover="javascript:hoverup(this, 'up2')" onmouseout="javascript:unhoverup(this)"></img></a>
+                    </div>
+                    <h1 class="name">Person 2</h1>
+                    <h2 class="votesdisplay" id="person2">score: 0</h2>
+                    <div class="votebutton" id="votedown">
+                        <a href="javascript:voteDown('person2', 'votedown2', 'down2')"class="votedownbutton"><img src="images/votedowngray.png" id="votedown2" onmouseover="javascript:hoverdown(this, 'down2')" onmouseout="javascript:unhoverdown(this)"></img></a>
+                    </div>
+                </div>
+                <div class="person">
+                    <div class="votebutton" id="voteup">
+                        <a href="javascript:voteUp('person2', 'voteup2', 'up2')"class="voteupbutton"><img src="images/voteupgray.png" id="voteup2" onmouseover="javascript:hoverup(this, 'up2')" onmouseout="javascript:unhoverup(this)"></img></a>
+                    </div>
+                    <h1 class="name">Person 2</h1>
+                    <h2 class="votesdisplay" id="person2">score: 0</h2>
+                    <div class="votebutton" id="votedown">
+                        <a href="javascript:voteDown('person2', 'votedown2', 'down2')"class="votedownbutton"><img src="images/votedowngray.png" id="votedown2" onmouseover="javascript:hoverdown(this, 'down2')" onmouseout="javascript:unhoverdown(this)"></img></a>
+                    </div>
+                </div>
+                <div class="person">
+                    <div class="votebutton" id="voteup">
+                        <a href="javascript:voteUp('person2', 'voteup2', 'up2')"class="voteupbutton"><img src="images/voteupgray.png" id="voteup2" onmouseover="javascript:hoverup(this, 'up2')" onmouseout="javascript:unhoverup(this)"></img></a>
+                    </div>
+                    <h1 class="name">Person 2</h1>
+                    <h2 class="votesdisplay" id="person2">score: 0</h2>
+                    <div class="votebutton" id="votedown">
+                        <a href="javascript:voteDown('person2', 'votedown2', 'down2')"class="votedownbutton"><img src="images/votedowngray.png" id="votedown2" onmouseover="javascript:hoverdown(this, 'down2')" onmouseout="javascript:unhoverdown(this)"></img></a>
+                    </div>
+                </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>
